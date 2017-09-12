@@ -16,7 +16,7 @@
 
 简单介绍一下 `Docker CE` 和 `Docker EE` 的区别：Docker CE (community-edition) 是社区版，免费，开源，Docker EE(enterprise-edition) 为企业版需付费，区别与定价如下图：
 
-![](https://github.com/Txiaozhe/docs/tree/master/docker/docker-plan.png)
+![](https://github.com/Txiaozhe/docs/blob/master/docker/docker-plan.png)
 
 ## 安装
 
