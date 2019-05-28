@@ -1,0 +1,53 @@
+```shell
+$ docker run -d -it --name yodaos-builder 2a697363a870
+```
+```shell
+-v /Users/jimtang/GitHub/yodaos:/root
+```
+
+vim
+wget
+python
+curl
+
+```shell
+$ apt-get install build-essential subversion libncurses5-dev zlib1g-dev gawk gcc-multilib flex git-core gettext libssl-dev unzip texinfo device-tree-compiler dosfstools libusb-1.0-0-dev vim wget python curl
+```
+
+```shell
+$ git config --global user.email "txiaozhe@gmail.com"
+$ git config --global user.name "txiaozhe"
+```
+```
+export FORCE_UNSAFE_CONFIGURE=1
+alias repo='/usr/local/bin/repo'
+alias ll='ls -la'
+```
+```shell
+$ ssh-keygen -t rsa -b 4096 -C "txiaozhe@gmail.com"
+$ eval "$(ssh-agent -s)"
+$ ssh-add ~/.ssh/id_rsa
+```
+
+```shell
+$ curl https://raw.githubusercontent.com/yodaos-project/yodaos/master/tools/repo > /usr/local/bin/repo
+$ chmod 777 /usr/local/bin/repo
+```
+
+```shell
+$ repo init -u https://github.com/yodaos-project/yodaos.git -m manifest.xml --repo-url=http://openai-corp.rokid.com/tools/repo --no-repo-verify
+$ .repo/manifests/tools/repo-username -u txiaozhe
+$ repo sync
+```
+
+```shell
+$ cp -r products/yodaos/rbpi-3b-plus/configs/broadcom_bcm2710_rpi3b_plus_defconfig openwrt/.config
+$ cd openwrt
+$ make defconfig && make
+```
+
+
+
+ gerrit repo 、 buildroot、openwrt
+
+[https://openai-corp.rokid.com](https://openai-corp.rokid.com/)
